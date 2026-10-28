@@ -58,7 +58,7 @@ export async function generatePokemonMeta(promptText, { baseImageDataUrl, apiKey
   if (!ai) throw new Error('GEMINI_API_KEY missing')
 
   const config = {
-    thinkingConfig: { thinkingBudget: 0 },
+    thinkingConfig: { thinking_level: 'MINIMAL' },
     responseMimeType: 'application/json',
     responseSchema: {
       type: Type.OBJECT,
